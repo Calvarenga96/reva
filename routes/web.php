@@ -18,3 +18,7 @@ Route::redirect('/', '/dashboard');
 Route::get('/dashboard', function () {
     return view('main');
 });
+
+Route::get('/calendar', function () {
+    return view('calendar');
+});
