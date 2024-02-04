@@ -8,7 +8,9 @@
     <title>Reva | Calendario</title>
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.5/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    @vite('resources/css/normalize.css')
     @vite('resources/css/app.css')
 </head>
 

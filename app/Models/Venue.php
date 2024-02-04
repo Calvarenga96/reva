@@ -10,4 +10,14 @@ class Venue extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'description'];
+
+    public function bookings()
+    {
+        return $this->hasMany(Booking::class);
+    }
+
+    public function tournaments()
+    {
+        return $this->hasMany(Tournament::class);
+    }
 }
