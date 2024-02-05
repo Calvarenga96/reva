@@ -36,9 +36,9 @@
                         <td class="py-2 px-4 border-b">{{ $booking->total_price }}</td>
                         <td class="py-2 px-4 border-b">{{ $booking->is_paid ? 'Si' : 'No' }}</td>
                         <td class="py-2 px-4 border-b">
-                            <button wire:click="read({{ $booking->id }})"
+                            <button @click="$wire.read({{ $booking->id }})"
                                 class="text-blue-500 hover:underline focus:outline-none">Editar</button>
-                            <button wire:click="delete({{ $booking->id }})"
+                            <button @click="$wire.delete({{ $booking->id }})"
                                 class="text-red-500 hover:underline focus:outline-none">Eliminar</button>
                         </td>
                     </tr>
