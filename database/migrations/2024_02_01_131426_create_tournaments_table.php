@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->date('date');
-            $table->foreignId('venue_id')->constrained();
+            $table->date('start_date');
+            $table->date('end_date');
+            $table->foreignId('venue_id')->constrained('venues');
             $table->timestamps();
         });
     }

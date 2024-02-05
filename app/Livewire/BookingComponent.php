@@ -11,7 +11,7 @@ class BookingComponent extends Component
 {
     use WithPagination;
 
-    public $modalFormVisible = false;
+
     public $venue_id;
     public $date;
     public $status = 'pendiente';
@@ -30,7 +30,7 @@ class BookingComponent extends Component
         ]);
     }
 
-    public function read($id)
+    public function edit($id)
     {
         $booking = Booking::findOrFail($id);
         $this->venue_id = $booking->venue_id;
@@ -39,8 +39,6 @@ class BookingComponent extends Component
         $this->notes = $booking->notes;
         $this->total_price = $booking->total_price;
         $this->is_paid = $booking->is_paid;
-
-        $this->modalFormVisible = true;
     }
 
     public function update()
