@@ -21,7 +21,7 @@ class BookingComponent extends Component
 
     public function render()
     {
-        $bookings = Booking::with('venue')->paginate(10);
+        $bookings = Booking::all();
         $venues = Venue::all();
 
         return view('livewire.booking-component', [
@@ -63,13 +63,12 @@ class BookingComponent extends Component
             'is_paid' => $this->is_paid,
         ]);
 
-        $this->modalFormVisible = false;
         $this->resetForm();
     }
 
     public function delete($id)
     {
-        Booking::find($id)->delete();
+        return Booking::findOrFail($id)->delete();
     }
 
     public function resetForm()
