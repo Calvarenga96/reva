@@ -1,6 +1,5 @@
 <div class="mx-auto bg-white p-4 rounded-md shadow-md">
     <form wire:submit.prevent="createVenue" class="mb-8">
-        @csrf
 
         <h1 class="text-xl font-semibold mb-4">Instalaciones</h1>
 

@@ -1,4 +1,4 @@
-<div class="bg-white p-4 rounded-md shadow-md" x-data="{ open: $openModal }">
+<div class="bg-white p-4 rounded-md shadow-md" x-data="{ open: false }">
 
     @teleport('.modal')
         <div class="absolute w-1/2 bg-blur">

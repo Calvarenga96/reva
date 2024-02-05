@@ -14,7 +14,9 @@
     @vite('resources/css/app.css')
 </head>
 
-<body class="z-0">
+<body class="flex bg-gray-100 h-full">
+    <livewire:sidebar-component />
+
     <div class="w-full">
         <livewire:show-dashboard />
     </div>

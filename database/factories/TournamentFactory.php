@@ -20,8 +20,9 @@ class TournamentFactory extends Factory
         $venues = Venue::pluck('id')->toArray();
 
         return [
-            'name' => $this->faker->randomElement(["torneo 1", "torneo 2", "torneo 3"]),
-            'date' => $this->faker->dateTimeBetween('now', '+30 days'),
+            'name' => $this->faker->randomElements(["torneo 1", "torneo 2", "torneo 3", "torneo 4", "torneo 5", "torneo 6", "torneo 7", "torneo 8", "torneo 9"])[0],
+            'start_date' => $this->faker->dateTimeBetween('now', '+30 days'),
+            'end_date' => $this->faker->dateTimeBetween('+30 day', '+35 day'),
             'venue_id' => $this->faker->randomElement($venues),
         ];
     }
